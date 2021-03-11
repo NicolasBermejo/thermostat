@@ -2,18 +2,24 @@
 <html>
   <head>
     <title>Thermostat</title>
+    <script src="src/thermostat.js"></script>
+    <link rel="stylesheet" type="text/css" href="public/style.css">
   </head>
   <body>
+    <script src="js/jquery.js"></script>
+    <script src="js/interface.js"></script>
     <section>
       <h1 id="temp"></h1>
       <p>
         <button id="temp-up">+</button>
         <button id="temp-down">-</button>
         <button id="temp-reset">reset</button>
-        power saving mode is <span id="powerSave">on</span>
+        <br><br>
+        Power saving mode is <span id="powerSave">On</span>
+        <br>
         <button id="togglePowerSave">PSM Toggle</button>
       </p>
     </section>
-    <script> src="src/thermostat.js" </script>
+
   </body>
 </html>
