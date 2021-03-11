@@ -2,10 +2,9 @@ class Thermostat {
   constructor() {
     this.temp = 20;
     this.powerSave = true;
-    this.maxtemp = 25
+    this.maxtemp = 25;
+    this.mintemp = 10
   }
-  // Think about refactoring to pass a block to the constructor - maxtemp should
-  // depend on whether powersave is on or off
 
   up() {
     if (this.temp < this.maxtemp) {
@@ -17,7 +16,7 @@ class Thermostat {
   }
 
   down() {
-    if (this.temp > 10) {
+    if (this.temp > this.mintemp) {
       this.temp --;
     }
     else {
@@ -35,25 +34,26 @@ class Thermostat {
   }
 
   usage() {
-    if (this.temp < 18) {
-      return "Low Usage";
-    }
-    else if (this.temp <=25) {
-      return "Medium Usage";
-    }
-    else {
-      return "AMERICA FUCK YEAH";
-    }
+    switch (true) {
+      case (this.temp < 18):
+        return "Low Usage";
+      case (this.temp <= 25):
+        return "Medium Usage";
+      default:
+        return "High Usage";
+    };
   }
-
-
-
-  // switch (this.temp) {
-  //   case (this.temp < 18):
-  //     return "Low Usage";
-  //   case (this.temp <= 25):
-  //     return "Medium Usage";
-  //   case (this.temp > 25):
-  //     return "AMERICA FUCK YEAH";
-  // };
 }
+
+
+
+// Instead of the Switch statement in the usage method:
+// if (this.temp < 18) {
+//   return "Low Usage";
+// }
+// else if (this.temp <=25) {
+//   return "Medium Usage";
+// }
+// else {
+//   return "AMERICA FUCK YEAH";
+// }
