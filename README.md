@@ -92,3 +92,32 @@ You can ask about the thermostat's current energy usage: < 18 is low-usage, <= 2
 > So I can make sure I'm wasting enough energy
 >
 > I want to check my current energy usage
+
+## JQuery
+
+To install JQuery, go to [JQuery downloads](https://jquery.com/download/) and get the uncompressed download into a jquery.js file (which should be put into a js folder along with an interface.js file).
+
+Once that is done, you can add the following scripts to you index.html file.
+
+```
+// index.html
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="src/thermostat.js"></script>
+  </head>
+  <body>
+    <script src="js/jquery.js"></script>
+    <script src="js/interface.js"></script>
+    <section>
+    </section>
+  </body>
+</html>
+```
+Once that is done, you can start your JQuery queries into the iterface.js file as such:
+
+```
+$(document).ready(function() {
+
+  });
+```
